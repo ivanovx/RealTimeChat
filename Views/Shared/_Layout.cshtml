@@ -1,23 +1,25 @@
 ﻿<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>@ViewBag.Title</title>
+        <title>@ViewBag.Title</title>
 
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jquery-signalr")
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jquery-signalr")
 
-    <script src="/signalr/hubs"></script>
-</head>
-<body>
-    @RenderBody()
-    <footer>
-        <p>&copy; @DateTime.Now.Year - Ivan Ivanov</p>
-    </footer>
+        <script src="/signalr/hubs"></script>
+    </head>
+    <body>
+        @RenderBody()
+    
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Ivan Ivanov</p>
+        </footer>
 
-    @RenderSection("scripts", required: false)
-</body>
+        @RenderSection("scripts", required: false)
+    </body>
 </html>
